@@ -1,0 +1,9 @@
+ o que NAO deve entrar dentro do .vsix publicado
+.vscode/**
+.vscode-test/**
+node_modules/**
+.gitignore
+.vscodeignore
+*.vsix
+**/*.map
+**/.DS_Store

@@ -1,0 +1,41 @@
+{
+  "name": "gitml",
+  "displayName": "GITML — páginas sem código",
+  "description": "Crie páginas modernas com tags declarativas e veja a prévia ao vivo, sem build e sem escrever HTML.",
+  "version": "0.0.1",
+  "publisher": "Gislaine-web3",
+  "author": { "name": "Gislaine" },
+  "license": "MIT",
+  "engines": { "vscode": "^1.70.0" },
+  "categories": ["Programming Languages", "Other"],
+  "keywords": ["gitml", "gbit", "markup", "landing-page", "no-code", "preview"],
+  "repository": { "type": "git", "url": "https://github.com/Gislaine-web3/gitml" },
+  "main": "./extension.js",
+  "activationEvents": ["onLanguage:gitml", "onCommand:gitml.openPreview", "onCommand:gitml.exportHtml"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "gitml",
+        "aliases": ["GITML", "gitml"],
+        "extensions": [".gitml"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gitml",
+        "scopeName": "source.gitml",
+        "path": "./syntaxes/gitml.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      { "command": "gitml.openPreview", "title": "GITML: Abrir prévia ao vivo", "category": "GITML" },
+      { "command": "gitml.exportHtml", "title": "GITML: Exportar página HTML", "category": "GITML" }
+    ],
+    "menus": { "editor/title": [
+      { "command": "gitml.openPreview", "when": "resourceExtname == .gitml", "group": "navigation" },
+      { "command": "gitml.exportHtml", "when": "resourceExtname == .gitml", "group": "navigation" }
+    ] },
+    "configurationDefaults": { "[gitml]": { "editor.wordWrap": "on", "editor.insertSpaces": true, "editor.tabSize": 2 } }
+  }
+}

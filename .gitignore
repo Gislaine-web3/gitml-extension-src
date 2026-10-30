@@ -1,0 +1,18 @@
+# dependencias
+node_modules/
+
+# pacotes gerados pelo vsce
+*.vsix
+
+# testes / build
+.vscode-test/
+out/
+dist/
+
+# logs
+npm-debug.log*
+yarn-error.log*
+
+# sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GITML",
+  "scopeName": "source.gitml",
+  "patterns": [{ "include": "#comments" }, { "include": "#tags" }],
+  "repository": {
+    "comments": { "name": "comment.block.gitml", "begin": "<!--", "end": "-->" },
+    "tags": { "patterns": [{
+      "name": "meta.tag.gitml",
+      "begin": "</?([A-Za-z][\\w-]*)",
+      "beginCaptures": { "0": { "name": "punctuation.definition.tag.begin.gitml" }, "1": { "name": "entity.name.tag.gitml" } },
+      "end": "/>|>", "endCaptures": { "0": { "name": "punctuation.definition.tag.end.gitml" } },
+      "patterns": [
+        { "name": "string.quoted.double.gitml", "begin": "\"", "end": "\"", "patterns": [{ "name": "constant.character.escape.gitml", "match": "\\\\." }] },
+        { "name": "string.quoted.single.gitml", "begin": "'", "end": "'" },
+        { "name": "entity.other.attribute-name.gitml", "match": "\\b[A-Za-z_][\\w-]*(?=\\s*=)" },
+        { "name": "keyword.operator.assignment.gitml", "match": "=" },
+        { "name": "constant.numeric.gitml", "match": "(?<=\\=\\s)\\d+(?:\\.\\d+)?" }
+      ]
+    }]}
+  }
+}
