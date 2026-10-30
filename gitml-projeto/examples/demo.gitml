@@ -1,0 +1,100 @@
+<gitml theme="dark" accent="teal" font="space-grotesk" title="Demo GITML — Todos os Componentes">
+
+<nav brand="Demo" sticky>
+  <theme-toggle>
+</nav>
+
+<hero variant="split" eyebrow="Demonstração"
+      title="Todos os componentes em *uma página*"
+      subtitle="Este arquivo mostra cada tag do GITML em ação."
+      cta="Explorar" href="#conteudo">
+</hero>
+
+<container>
+<section id="conteudo" title="Layout" eyebrow="Grid, Bento e Split">
+  <bento>
+    <card title="Bento 1" icon="star">Célula grande</card>
+    <card title="Bento 2" icon="heart">Célula</card>
+    <card title="Bento 3" icon="zap">Célula</card>
+    <card title="Bento 4" icon="globe">Célula larga</card>
+    <card title="Bento 5" icon="rocket">Célula</card>
+  </bento>
+</section>
+
+<section title="Tipografia" eyebrow="Textos">
+  <h2>Título com <grad>degradê</grad> e <mark>marcação</mark></h2>
+  <p>Parágrafo com **negrito**, *itálico*, `código inline` e [um link](https://example.com).</p>
+  <quote author="Gislaine">A simplicidade é o último grau da sofisticação.</quote>
+  <p>Pressione <kbd>Ctrl</kbd> + <kbd>S</kbd> para salvar.</p>
+  <ul icon="check">
+    <li>Lista com ícones</li>
+    <li>Segundo item</li>
+  </ul>
+</section>
+
+<section title="Código" eyebrow="Bloco com cópia">
+  <code lang="gitml" title="exemplo.gitml">
+<hero title="Olá, mundo!" cta="Começar"></hero>
+  </code>
+</section>
+
+<section title="Dados" eyebrow="Tabela, progresso, avaliação">
+  <table>
+    <tr><td>Componente</td><td>Status</td></tr>
+    <tr><td>Hero</td><td><badge variant="success">Pronto</badge></td></tr>
+    <tr><td>Modal</td><td><badge variant="warning">Beta</badge></td></tr>
+  </table>
+  <spacer>
+  <progress value="75" label="Progresso do projeto">
+  <rating value="4">
+  <countdown to="2026-12-31">
+</section>
+
+<section title="Feedback" eyebrow="Alertas e badges">
+  <alert type="info" title="Informação">Este é um alerta informativo.</alert>
+  <alert type="success" title="Sucesso">Tudo funcionando!</alert>
+  <alert type="warning" title="Atenção">Verifique os dados.</alert>
+  <alert type="danger" title="Erro">Algo deu errado.</alert>
+  <p>Passe o mouse <tooltip text="Eu sou uma dica!">aqui</tooltip> para ver o tooltip.</p>
+</section>
+
+<section title="Interativos" eyebrow="Abas, modal, carrossel">
+  <tabs>
+    <tab label="Primeira"><p>Conteúdo da primeira aba.</p></tab>
+    <tab label="Segunda"><p>Conteúdo da segunda aba.</p></tab>
+  </tabs>
+  <modal trigger="Abrir modal" title="Olá!">
+    <p>Este é um modal aberto por um botão.</p>
+  </modal>
+  <carousel>
+    <card title="Slide 1" icon="star">Arraste para o lado</card>
+    <card title="Slide 2" icon="heart">Carrossel com rolagem</card>
+    <card title="Slide 3" icon="zap">Mais um slide</card>
+  </carousel>
+</section>
+
+<section title="Formulário" eyebrow="Contato">
+  <form action="#" method="post">
+    <input label="Nome" name="nome" placeholder="Seu nome" required>
+    <input label="E-mail" name="email" type="email" placeholder="voce@email.com">
+    <select label="Assunto" name="assunto" options="Dúvida,Sugestão,Parceria"></select>
+    <textarea label="Mensagem" name="msg" placeholder="Escreva aqui..."></textarea>
+    <submit>Enviar mensagem</submit>
+  </form>
+  <newsletter placeholder="Seu melhor e-mail" button="Assinar"></newsletter>
+</section>
+
+<section title="Timeline" eyebrow="História">
+  <timeline>
+    <step title="Ideia" date="Out 2026">Nasce o GITML.</step>
+    <step title="v0.0.1" date="Out 2026">Primeira versão de testes.</step>
+    <step title="Futuro" date="2027">Lançamento público.</step>
+  </timeline>
+</section>
+</container>
+
+<footer brand="GITML Demo">
+  <text muted>Feito com GITML v0.0.1</text>
+</footer>
+
+</gitml>
