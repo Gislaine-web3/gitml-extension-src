@@ -1,0 +1,19 @@
+# GBit Shell - default ignores
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.log
+.gbit/
+coverage/
+.pytest_cache/
+.ruff_cache/
